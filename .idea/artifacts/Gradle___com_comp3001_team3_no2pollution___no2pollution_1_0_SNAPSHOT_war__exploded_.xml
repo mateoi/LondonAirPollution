@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : com.comp3001.team3:no2pollution : no2pollution-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/out/artifacts/no2pollution/exploded/no2pollution-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="no2pollution/web/Web Gradle : no2pollution-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="no2pollution" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: com.google.maps:google-maps-services:0.1.8" />
+          <element id="library" level="project" name="Gradle: com.squareup.okhttp:okhttp:2.0.0" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.3.1" />
+          <element id="library" level="project" name="Gradle: joda-time:joda-time:2.4" />
+          <element id="library" level="project" name="Gradle: com.squareup.okio:okio:1.0.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/no2pollution/exploded/no2pollution-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
