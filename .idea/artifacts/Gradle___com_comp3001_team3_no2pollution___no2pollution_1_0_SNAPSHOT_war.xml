@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="Gradle : com.comp3001.team3:no2pollution : no2pollution-1.0-SNAPSHOT.war">
-    <output-path>$PROJECT_DIR$/out/artifacts/no2pollution</output-path>
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/no2pollution</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$" />
     </properties>
@@ -20,7 +20,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/no2pollution/exploded/no2pollution-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/build/classes/artifacts/no2pollution/exploded/no2pollution-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
       </element>
     </root>
   </artifact>
