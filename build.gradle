@@ -17,3 +17,5 @@ dependencies {
 
 }
 
+task stage(dependsOn: ['clean', 'installApp'])
+
