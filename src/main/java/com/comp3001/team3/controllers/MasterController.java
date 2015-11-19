@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping(value= {"/api/v1"})
 public class MasterController {
 
 
