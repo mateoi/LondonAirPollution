@@ -1,10 +1,29 @@
 group 'com.comp3001.team3'
 version '1.0-SNAPSHOT'
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
 
 sourceCompatibility = 1.7
+
+
+mainClassName = "com.comp3001.team3.No2Pollution"
+
+jar {
+    baseName = 'no2pollution'
+    version = '0.1.0'
+}
 
 repositories {
     mavenCentral()
@@ -13,11 +32,25 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'com.google.maps:google-maps-services:0.1.8'
+    compile 'org.springframework.boot:spring-boot-starter-web'
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
 }
 
-task stage {
+/*task stage {
   dependsOn build
-}
+}*/
 
+
+task stage(type: Copy, dependsOn: [clean, build]) {
+    from jar.archivePath
+    into project.rootDir
+    rename {
+        'app.jar'
+    }
+}
+stage.mustRunAfter(clean)
+
+clean << {
+    project.file('app.jar').delete()
+}

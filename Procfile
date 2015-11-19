@@ -1,1 +1,1 @@
-web: /build/install/no2pollution/bin/no2pollution
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
