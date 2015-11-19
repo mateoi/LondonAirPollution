@@ -40,7 +40,7 @@ public class RouteGenerator {
             List<LatLng> points = routes[0].overviewPolyline.decodePath(); //loads of points add up the pollution on
 
 
-            String polyline = routes[0].overviewPolyline.getEncodedPath();
+            this.polyline = routes[0].overviewPolyline.getEncodedPath();
         }catch (Exception e){
             e.printStackTrace();
         }
