@@ -11,7 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'war'
+//apply plugin: 'war'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
@@ -29,11 +29,16 @@ repositories {
     mavenCentral()
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'com.google.maps:google-maps-services:0.1.8'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+//    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
 }
