@@ -31,6 +31,7 @@ public class RouteGenerator {
 
 
             apiRequest.mode(TravelMode.WALKING);
+            apiRequest.waypoints();
             apiRequest.origin(start);
             apiRequest.destination(destination);
 
