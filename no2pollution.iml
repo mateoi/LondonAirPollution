@@ -67,5 +67,14 @@
     <orderEntry type="library" exported="" name="Gradle: org.jboss.logging:jboss-logging:3.3.0.Final" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.fasterxml:classmate:1.1.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.slf4j:slf4j-api:1.7.13" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library name="Gradle: org.json-20120521">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/org.json-20120521.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
