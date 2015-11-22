@@ -1,5 +1,7 @@
 group 'com.comp3001.team3'
 version '1.0-SNAPSHOT'
+
+
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
@@ -20,10 +22,6 @@ buildscript {
 
 
 
-apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'idea'
-apply plugin: 'spring-boot'
 
 sourceCompatibility = 1.7
 
