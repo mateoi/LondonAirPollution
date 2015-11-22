@@ -56,3 +56,10 @@ crashlytics-build.properties
 
 build/
 /bin/
+
+.gradle
+
+*.iml
+*.ipr
+*.iws
+.DS_Store
