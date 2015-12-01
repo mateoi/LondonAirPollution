@@ -1,6 +1,7 @@
 package com.comp3001.team3.calculations;
 
 import com.comp3001.team3.datasources.google.Gkey;
+import com.comp3001.team3.pojo.Polyline;
 import com.google.maps.DirectionsApi;
 import com.google.maps.DirectionsApiRequest;
 import com.google.maps.GeoApiContext;
@@ -14,7 +15,7 @@ public class RouteGenerator {
 
     String start;
     String destination;
-    String polyline;
+    List<Polyline> polylines;
 
     public RouteGenerator(String start, String destination){
         this.start          = start;
@@ -37,10 +38,14 @@ public class RouteGenerator {
             //add waypoints if needed: apiRequest.waypoints()
 
             DirectionsRoute[] routes = apiRequest.await();
-            List<LatLng> points = routes[0].overviewPolyline.decodePath(); //loads of points add up the pollution on
+            //List<LatLng> points = routes[0].overviewPolyline.decodePath(); //loads of points add up the pollution on
 
 
-            this.polyline = routes[0].overviewPolyline.getEncodedPath();
+            for (DirectionsRoute route : routes){
+                polylines.add(new Polyline(route.overviewPolyline.getEncodedPath()));
+                System.out.print("adding polyline");
+            }
+            //this.polyline = routes[0].overviewPolyline.getEncodedPath();
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -54,12 +59,12 @@ public class RouteGenerator {
         this.start = start;
     }
 
-    public String getPolyline() {
-        return polyline;
+    public List<Polyline> getPolylines() {
+        return polylines;
     }
 
-    public void setPolyline(String polyline) {
-        this.polyline = polyline;
+    public void setPolyline(List<Polyline> polylines) {
+        this.polylines = polylines;
     }
 
     public String getDestination() {
